@@ -45,7 +45,7 @@
                                     <segue destination="2aL-tH-17g" kind="show" id="ZeR-bf-KoQ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If you're new to Twitter..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjY-sh-pFO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New to Twitter?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjY-sh-pFO">
                                 <rect key="frame" x="106" y="442" width="162" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PES-Ij-UKz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77.599999999999994" y="208.37438423645321"/>
+            <point key="canvasLocation" x="49" y="208"/>
         </scene>
         <!--Create Account-->
         <scene sceneID="ciO-OV-C4E">
@@ -113,7 +113,7 @@
         <!--Navigation Controller-->
         <scene sceneID="nhK-gx-MKD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KOe-5X-z9t" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RootNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KOe-5X-z9t" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="20w-Q8-JV1">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>

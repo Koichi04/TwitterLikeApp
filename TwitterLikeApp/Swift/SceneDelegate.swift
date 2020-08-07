@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NCMB
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -14,10 +15,42 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        
+        // 保存領域を作る
+        let ud = UserDefaults.standard
+        let isLogin = ud.bool(forKey: "isLogin")
+        let window = UIWindow(windowScene: scene as! UIWindowScene)
+        
+        
+        // ストーリーボードをスイッチする
+        if isLogin == true {
+            print("ログインなう")
+            // ログイン中だった場合の分岐
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            // VCをインスタンス化
+            let rootVC = storyboard.instantiateViewController(identifier: "RootTabBarController")
+            self.window?.rootViewController = rootVC
+            self.window?.backgroundColor = UIColor.white
+            // windowを表示する
+            self.window?.makeKeyAndVisible()
+            
+        } else {
+            print("ログアウトなう")
+            //　ログインしていないとき
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let storyboard = UIStoryboard(name: "LogIn", bundle: Bundle.main)
+            // VCをインスタンス化
+            let rootVC = storyboard.instantiateViewController(identifier: "RootNavigationController")
+            self.window?.rootViewController = rootVC
+            self.window?.backgroundColor = UIColor.white
+            // windowを表示する
+            self.window?.makeKeyAndVisible()
+        }
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

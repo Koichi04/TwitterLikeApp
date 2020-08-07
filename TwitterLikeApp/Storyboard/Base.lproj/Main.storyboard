@@ -20,7 +20,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="gZA-de-Ihx">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bu0-65-ZJS" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="RootTabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bu0-65-ZJS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sDE-Tq-pSe">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -105,11 +105,11 @@
             </objects>
             <point key="canvasLocation" x="1261.5999999999999" y="-882.26600985221683"/>
         </scene>
-        <!--Post-->
+        <!--Search-->
         <scene sceneID="fT1-mT-Ofj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ata-SP-Wl5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Post" image="plus.circle" catalog="system" id="agT-5k-K0x"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="agT-5k-K0x"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t6d-QP-Ahh">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -166,7 +166,7 @@
     <resources>
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="house" catalog="system" width="128" height="110"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
-        <image name="plus.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>
